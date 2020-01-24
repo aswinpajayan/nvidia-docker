@@ -2,7 +2,6 @@
 xhost +local:root
 
 nvidia-docker run -it \
-nvidia-docker run -it \
 --env="DISPLAY"  \
 --env="QT_X11_NO_MITSHM=1"  \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
@@ -16,6 +15,6 @@ nvidia-docker run -it \
 -e LOCAL_USER_ID=`id -u $USER` \
 -e LOCAL_GROUP_ID=`id -g $USER` \
 -e LOCAL_GROUP_NAME=`id -gn $USER` \
- ros-kinetic-gazebo7
+ gaz_new:latest bash
 
 xhost -local:root
